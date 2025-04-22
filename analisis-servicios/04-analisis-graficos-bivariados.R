@@ -55,7 +55,7 @@ ggplot(datos_limpios) +
   aes(x = edad_jefe_hogar, y = abonos_prepagos_por_persona) +
   geom_point() +
   labs(x = "Edad jefe del hogar", y = "Abonos prepagos por persona") +
-  ggtitle("Relación entre la edad del jefe de hogar y la cantidad de abonos prepagos\nde datos móviles por persona") +
+  ggtitle("Relación entre la edad del jefe de hogar y la cantidad de abonos prepagos\nde datos móviles por persona. Barrios populares de Argentina. Año 2022.") +
   theme_classic() +
   theme(plot.title = element_text(hjust = 0.5)) # Centrar título
 
@@ -69,7 +69,7 @@ ggplot(datos_limpios) +
   geom_boxplot(show.legend = F, fill = "lightblue") +
   labs(x = "Edad del jefe de hogar", y = "Acceso a internet") +
   coord_flip() +
-  ggtitle("Relación entre la edad del jefe de hogar y el tipo de acceso a internet") +
+  ggtitle("Relación entre la edad del jefe de hogar y el tipo de conexión a internet.\nBarrios populares de Argentina. Año 2022.") +
   theme_light() +
   scale_x_continuous(breaks = seq(0, 100, 10)) + 
   theme(
