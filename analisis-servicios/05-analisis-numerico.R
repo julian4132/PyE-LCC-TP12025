@@ -12,14 +12,23 @@ attach(datos_limpios)
 # Posición: tendencia central #
 ###############################
 
-# Moda para la frecuencia de cortes de suministro eléctrico en el verano
-sort(table(frecuencia_cortes_de_luz_verano), decreasing = TRUE)[1]
-
 # Moda para el tipo de conexión a la red eléctrica
-sort(table(tipo_conexion_electrica), decreasing = TRUE)[1]
+names(sort(table(tipo_conexion_electrica), decreasing = TRUE))[1]
 
-# Moda para el metodo de obtencion de agua
-sort(table(modo_obtencion_agua), decreasing = TRUE)[1]
+# Mediana de la frecuencia de cortes del suministro eléctrico en verano
+cortes_verano_ord <- sort(frecuencia_cortes_de_luz_verano)
+cortes_verano_ord[ceiling(length(cortes_verano_ord) / 2)]
+
+# Mediana de la frecuencia de cortes del suministro eléctrico en invierno
+cortes_invierno_ord <- sort(frecuencia_cortes_de_luz_invierno)
+cortes_invierno_ord[ceiling(length(cortes_invierno_ord) / 2)]
+
+# Mediana de la pérdida de electrodomésticos en el último año a causa de la instalación eléctrica
+perdida_electrodomesticos_ord <- sort(perdida_electrodomesticos)
+perdida_electrodomesticos_ord[ceiling(length(perdida_electrodomesticos_ord) / 2)]
+
+# Moda para la forma de obtención de agua en la vivienda
+names(sort(table(modo_obtencion_agua), decreasing = TRUE))[1]
 
 # Moda para el tipo de plaga
 ninguna = ifelse((cucarachas + mosquitos + ratas) == 0, 1, 0)
@@ -40,18 +49,18 @@ sum(electricidad_en_calefaccion)/length(electricidad_en_calefaccion) # porcentaj
 # Promedio de número de abonos/prepagos de datos móviles por vivienda
 mean(cantidad_abonos_datos_moviles)
 
-# Promedio de la edad del jefe del hogar
-mean(edad_jefe_hogar)
+# Mediana de la edad del jefe de hogar
+median(edad_jefe_hogar)
 
 ##############
 # Dispersión #
 ##############
 
-# Desvío estándar de número de abonos/prepagos de datos móviles por vivienda
-sd(cantidad_abonos_datos_moviles)
+# Coeficiente de variación del número de abonos/prepagos de datos móviles por vivienda
+sd(cantidad_abonos_datos_moviles) / mean(cantidad_abonos_datos_moviles)
 
-# Desvío estandar de la edad del jefe de hogar
-sd(edad_jefe_hogar)
+# Rango intercuartílico de la edad del jefe de hogar
+IQR(edad_jefe_hogar)
 
 # Covarianza y correlación de la relación entre la edad del jefe del hogar y la 
 # cantidad de abonos/prepagos de datos móviles por persona
