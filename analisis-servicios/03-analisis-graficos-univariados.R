@@ -56,6 +56,30 @@ datos_limpios %>%
     plot.title = element_text(hjust = 0.5)  # Centrar título
     ) 
 
+# Pérdida de electrodomésticos o herramientas de trabajo en el último año a causa de la instalación eléctrica
+datos_limpios %>%
+  mutate(
+    perdida_electrodomesticos = fct_recode(perdida_electrodomesticos,
+                                            "Ninguno" = "No",
+                                            "Uno o más" = "Si, al menos un electrodoméstico o herramientas de trabajo",
+                                            "Dos o más" = "Si, al menos dos electrodomésticos" ,
+                                            "Tres o más" = "Si, tres o más"
+    ) #     Renombra los niveles
+  ) %>% 
+  ggplot() + 
+  aes(x = perdida_electrodomesticos) +
+  geom_bar(width = 0.75,   # Ancho de barras
+           fill = '#8EC6F0',  # Color de relleno 
+           col = "black",  # Color de línea
+           alpha = 0.6) +  # Transparencia
+  labs(y = "Número de viviendas", x = "Electrodomésticos perdidos") + # Nombres de ejes
+  ggtitle("Pérdida de electrodomésticos y herramientas de trabajo en el plazo de un año.\nBarrios populares de Argentina. Año 2022.") +
+  theme_classic() + # Temas preconfigurados de R https://r-charts.com/ggplot2/themes/
+  theme(
+    axis.text.x = element_text(size = 6),   # Tamaño de los valores del eje X
+    plot.title = element_text(hjust = 0.5)  # Centrar título
+  ) 
+
 # Número de viviendas por cada método de obtención del agua
 datos_limpios %>%
   ggplot() + 
