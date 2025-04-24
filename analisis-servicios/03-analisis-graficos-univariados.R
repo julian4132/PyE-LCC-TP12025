@@ -19,7 +19,7 @@ datos_limpios %>%
            col = "black",  # Color de línea
            alpha = 0.6) +  # Transparencia
   labs(y = "Número de viviendas", x = "Tipo de conexión eléctrica") + # Nombres de ejes
-  ggtitle("Distribución del tipo de conexión eléctrica.\nBarrios populares de Argentina. Año 2022.") +
+  ggtitle("Distribución de hogares de acuerdo al tipo de conexión eléctrica.\nBarrios populares de Argentina. Año 2022.") +
   coord_flip() + # Barras horizontales o verticales
   theme_classic() + # Temas preconfigurados de R https://r-charts.com/ggplot2/themes/
   theme(plot.title = element_text(hjust = 0.5)) # Centrar título
@@ -33,7 +33,7 @@ datos_limpios %>%
            col = "black",  # Color de línea
            alpha = 0.6) +  # Transparencia
   labs(y = "Número de viviendas", x = "Frecuencias") + # Nombres de ejes
-  ggtitle("Frecuencias de corte de suministro eléctrico en el verano.\nBarrios populares de Argentina. Año 2022.") +
+  ggtitle("Distribución de hogares según las frecuencias de corte de suministro eléctrico en el verano.\nBarrios populares de Argentina. Año 2022.") +
   theme_classic() + # Temas preconfigurados de R https://r-charts.com/ggplot2/themes/
   theme(
     axis.text.x = element_text(size = 6),   # Tamaño de los valores del eje X
@@ -49,7 +49,7 @@ datos_limpios %>%
            col = "black",  # Color de línea
            alpha = 0.6) +  # Transparencia
   labs(y = "Número de viviendas", x = "Frecuencias") + # Nombres de ejes
-  ggtitle("Frecuencias de corte de suministro eléctrico en el invierno.\nBarrios populares de Argentina. Año 2022.") +
+  ggtitle("Distribución de hogares según las frecuencias de corte de suministro eléctrico en el invierno.\nBarrios populares de Argentina. Año 2022.") +
   theme_classic() + # Temas preconfigurados de R https://r-charts.com/ggplot2/themes/
   theme(
     axis.text.x = element_text(size = 6),   # Tamaño de los valores del eje X
@@ -89,7 +89,7 @@ datos_limpios %>%
            col = "black",  # Color de línea
            alpha = 0.6) +  # Transparencia
   labs(y = "Número de viviendas", x = "Método de obtención de agua") + # Nombres de ejes
-  ggtitle("Distribución de los métodos de obtención de agua.\nBarrios populares de Argentina. Año 2022.") +
+  ggtitle("Distribución de hogares en base al método de obtención de agua.\nBarrios populares de Argentina. Año 2022.") +
   coord_flip() + # Barras horizontales o verticales
   theme_classic() + # Temas preconfigurados de R https://r-charts.com/ggplot2/themes/
   theme(plot.title = element_text(hjust = 0.5)) # Centrar título
@@ -122,7 +122,7 @@ datos_limpios %>%
            fill="#8EC6F0",
            col = "black") +
   labs(y = "Número de viviendas", x = "Presencia de plagas") +
-  ggtitle("Distribución de la presencia de plagas.\nBarrios populares de Argentina. Año 2022.") +
+  ggtitle("Distribución de viviendas en base a la presencia de plagas.\nBarrios populares de Argentina. Año 2022.") +
   coord_flip() +
   theme_classic() + # Temas preconfigurados de R https://r-charts.com/ggplot2/themes/
   theme(plot.title = element_text(hjust = 0.5)) # Centrar título
@@ -158,7 +158,7 @@ datos_limpios %>%
            fill="#8EC6F0",
            col = "black") +
   labs(y = "Porcentaje de viviendas (%)", x = "Fuentes de energia para la cocina") +
-  ggtitle("Distribución de las fuentes de energía para la cocina.\nBarrios populares de Argentina. Año 2022.") +
+  ggtitle("Distribución de hogares según fuentes de energía para la cocina.\nBarrios populares de Argentina. Año 2022.") +
   coord_flip() +
   theme_classic() + # Temas preconfigurados de R https://r-charts.com/ggplot2/themes/
   theme(plot.title = element_text(hjust = 0.5)) # Centrar título
@@ -195,7 +195,7 @@ datos_limpios %>%
            fill="#8EC6F0",
            col = "black") +
   labs(y = "Porcentaje de viviendas (%)", x = "Fuentes de energía para calefaccion") +
-  ggtitle("Distribución de las fuentes de energía para la calefacción.\nBarrios populares de Argentina. Año 2022.") +
+  ggtitle("Distribución de hogares según fuentes de energía para la calefacción.\nBarrios populares de Argentina. Año 2022.") +
   coord_flip() +
   theme_classic() + # Temas preconfigurados de R https://r-charts.com/ggplot2/themes/
   theme(plot.title = element_text(hjust = 0.5)) # Centrar título
@@ -209,7 +209,7 @@ datos_limpios %>%
            col = "black",  # Color de línea
            alpha = 0.6) +  # Transparencia
   labs(y = "Número de viviendas", x = "Tipo de conexión a internet") + # Nombres de ejes
-  ggtitle("Distribución del acceso a internet de banda ancha.\nBarrios populares de Argentina. Año 2022.") +
+  ggtitle("Distribución de hogares por tipo de acceso a internet de banda ancha.\nBarrios populares de Argentina. Año 2022.") +
   coord_flip() + # Barras horizontales o verticales
   theme_classic() + # Temas preconfigurados de R https://r-charts.com/ggplot2/themes/
   theme(plot.title = element_text(hjust = 0.5)) # Centrar título
@@ -221,7 +221,7 @@ datos_limpios %>%
 # Número de abonos/prepagos de datos móviles por cada vivienda
 ggplot(datos_limpios) +
   aes(x = cantidad_abonos_datos_moviles) +
-  ggtitle("Distribución de la cantidad de abonos prepagos de datos móviles.\nBarrios populares de Argentina. Año 2022.") +
+  ggtitle("Distribución de hogares según la cantidad de abonos prepagos de datos móviles.\nBarrios populares de Argentina. Año 2022.") +
   geom_bar(width = 0.10, 
            fill="#8EC6F0",
            col = "black") +
