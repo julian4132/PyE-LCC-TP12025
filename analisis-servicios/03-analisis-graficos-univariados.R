@@ -16,8 +16,7 @@ datos_limpios %>%
   aes(x = reorder(tipo_conexion_electrica, tipo_conexion_electrica, function(x) length(x))) + # Ordenar según frecuencia
   geom_bar(width = 0.75,   # Ancho de barras
            fill = '#8EC6F0',  # Color de relleno 
-           col = "black",  # Color de línea
-           alpha = 0.6) +  # Transparencia
+           col = "black") +  # Color de línea
   labs(y = "Número de viviendas", x = "Tipo de conexión eléctrica") + # Nombres de ejes
   ggtitle("Distribución del tipo de conexión eléctrica.\nBarrios populares de Argentina. Año 2022.") +
   coord_flip() + # Barras horizontales o verticales
@@ -30,8 +29,7 @@ datos_limpios %>%
   aes(x = frecuencia_cortes_de_luz_verano) +
   geom_bar(width = 0.75,   # Ancho de barras
            fill = '#8EC6F0',  # Color de relleno 
-           col = "black",  # Color de línea
-           alpha = 0.6) +  # Transparencia
+           col = "black") + # Color de línea
   labs(y = "Número de viviendas", x = "Frecuencias") + # Nombres de ejes
   ggtitle("Frecuencias de corte de suministro eléctrico en el verano.\nBarrios populares de Argentina. Año 2022.") +
   theme_classic() + # Temas preconfigurados de R https://r-charts.com/ggplot2/themes/
@@ -46,8 +44,7 @@ datos_limpios %>%
   aes(x = frecuencia_cortes_de_luz_invierno) +
   geom_bar(width = 0.75,   # Ancho de barras
            fill = '#8EC6F0',  # Color de relleno 
-           col = "black",  # Color de línea
-           alpha = 0.6) +  # Transparencia
+           col = "black") + # Color de línea
   labs(y = "Número de viviendas", x = "Frecuencias") + # Nombres de ejes
   ggtitle("Frecuencias de corte de suministro eléctrico en el invierno.\nBarrios populares de Argentina. Año 2022.") +
   theme_classic() + # Temas preconfigurados de R https://r-charts.com/ggplot2/themes/
@@ -70,8 +67,7 @@ datos_limpios %>%
   aes(x = perdida_electrodomesticos) +
   geom_bar(width = 0.75,   # Ancho de barras
            fill = '#8EC6F0',  # Color de relleno 
-           col = "black",  # Color de línea
-           alpha = 0.6) +  # Transparencia
+           col = "black") + # Color de línea
   labs(y = "Número de viviendas", x = "Electrodomésticos perdidos") + # Nombres de ejes
   ggtitle("Pérdida de electrodomésticos y herramientas de trabajo en el plazo de un año.\nBarrios populares de Argentina. Año 2022.") +
   theme_classic() + # Temas preconfigurados de R https://r-charts.com/ggplot2/themes/
@@ -86,8 +82,7 @@ datos_limpios %>%
   aes(x = reorder(modo_obtencion_agua, modo_obtencion_agua, function(x) +length(x))) + # Ordenar según frecuencia
   geom_bar(width = 0.75,   # Ancho de barras
            fill = '#8EC6F0',  # Color de relleno 
-           col = "black",  # Color de línea
-           alpha = 0.6) +  # Transparencia
+           col = "black") +  # Color de línea
   labs(y = "Número de viviendas", x = "Método de obtención de agua") + # Nombres de ejes
   ggtitle("Distribución de los métodos de obtención de agua.\nBarrios populares de Argentina. Año 2022.") +
   coord_flip() + # Barras horizontales o verticales
@@ -206,8 +201,7 @@ datos_limpios %>%
   aes(x = reorder(internet_banda_ancha, internet_banda_ancha, function(x) length(x))) + # Ordenar según frecuencia
   geom_bar(width = 0.75,   # Ancho de barras
            fill = '#8EC6F0',  # Color de relleno 
-           col = "black",  # Color de línea
-           alpha = 0.6) +  # Transparencia
+           col = "black") +  # Color de línea
   labs(y = "Número de viviendas", x = "Tipo de conexión a internet") + # Nombres de ejes
   ggtitle("Distribución del acceso a internet de banda ancha.\nBarrios populares de Argentina. Año 2022.") +
   coord_flip() + # Barras horizontales o verticales
