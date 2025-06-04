@@ -62,6 +62,9 @@ sd(cantidad_abonos_datos_moviles) / mean(cantidad_abonos_datos_moviles)
 # Rango intercuartílico de la edad del jefe de hogar
 IQR(edad_jefe_hogar)
 
+# Mínimo, máximo, cuartiles y media de la edad del jefe de hogar
+summary(edad_jefe_hogar)
+
 # Covarianza y correlación de la relación entre la edad del jefe del hogar y la 
 # cantidad de abonos/prepagos de datos móviles por persona
 var(edad_jefe_hogar,abonos_prepagos_por_persona) # Covariancia
